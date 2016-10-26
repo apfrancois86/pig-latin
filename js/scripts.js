@@ -1,9 +1,23 @@
 // var symbols = ["!", "@", ".", ",", "?", "#", "$", "%", "/"]
 // var numbers = ["0","1","2","3","4","5","6","7","8","9"]
-
 var pigLatin = function(sentence) {
-    return false;
-  }
+var inputNoSymbols = sentence.replace(/[^a-zA-Z ]/g, "");
+console.log(inputNoSymbols);
+var letters = inputNoSymbols.split("");
+  console.log(letters);
+};
+
+// var pigLatin = function(sentence) {
+//   sentence.filter(function(x){
+//     console.log(characterLessSentence);
+//     if (x !== "1" && x !== "2" && x !== "3") {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+// }
+
 
 
 //Start UI Logic
