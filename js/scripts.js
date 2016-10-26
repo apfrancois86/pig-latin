@@ -3,6 +3,12 @@ var words = sentence.split("");
   console.log(words);
     if ((/^[aeiou]$/).test(words[0])) {
       return sentence + "ay";
+    }  else if ((/[b-df-hj-np-tv-z]/.test(words[0])) && (/[q]/).test(words[1]) && (/[u]/).test(words[2])){
+      var sliceWord = words.splice(0,3);
+      var joinSlice = sliceWord.join('');
+      words.push(joinSlice + "ay");
+      var joinWord = words.join('');
+      return joinWord;
     }  else if ((/[q]/).test(words[0]) && (/[u]/).test(words[1])){
       var sliceWord = words.splice(0,2);
       var joinSlice = sliceWord.join('');
