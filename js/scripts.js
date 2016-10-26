@@ -1,10 +1,13 @@
-// var symbols = ["!", "@", ".", ",", "?", "#", "$", "%", "/"]
-// var numbers = ["0","1","2","3","4","5","6","7","8","9"]
+var vowels = ["a","e","i","o", "u"];
+
 var pigLatin = function(sentence) {
 var inputNoSymbols = sentence.replace(/[^a-zA-Z ]/g, "");
 console.log(inputNoSymbols);
-var letters = inputNoSymbols.split(" ");
-  console.log(letters);
+var words = inputNoSymbols.split(" ");
+  console.log(words);
+  if (words.includes(vowels[0])) {
+    alert("this is an A");
+  }
 };
 
 // var pigLatin = function(sentence) {
