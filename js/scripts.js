@@ -3,7 +3,7 @@
 var pigLatin = function(sentence) {
 var inputNoSymbols = sentence.replace(/[^a-zA-Z ]/g, "");
 console.log(inputNoSymbols);
-var letters = inputNoSymbols.split("");
+var letters = inputNoSymbols.split(" ");
   console.log(letters);
 };
 
