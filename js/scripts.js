@@ -1,12 +1,15 @@
-var vowels = ["a","e","i","o","u"];
-var output= "";
-
 var pigLatin = function(sentence) {
 var words = sentence.split("");
   console.log(words);
     if ((/^[aeiou]$/).test(words[0])) {
       return sentence + "ay";
-    } else if ((/[b-df-hj-np-tv-z]/.test(words[0])) && (/[b-df-hj-np-tv-z]/.test(words[1]))) {
+    } else if (((/[b-df-hj-np-tv-z]/.test(words[0]))) && ((/[b-df-hj-np-tv-z]/.test(words[1]))) && ((/[b-df-hj-np-tv-z]/.test(words[2])))) {
+      var sliceWord = words.splice(0,3);
+      var joinSlice = sliceWord.join('');
+      words.push(joinSlice + "ay");
+      var joinWord = words.join('');
+      return joinWord;
+    }  else if ((/[b-df-hj-np-tv-z]/.test(words[0])) && (/[b-df-hj-np-tv-z]/.test(words[1]))) {
       var sliceWord = words.splice(0,2);
       var joinSlice = sliceWord.join('');
       words.push(joinSlice + "ay");
