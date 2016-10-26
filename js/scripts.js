@@ -1,26 +1,17 @@
-var vowels = ["a","e","i","o", "u"];
+var vowels = ["a","e","i","o","u"];
+var output= "";
 
 var pigLatin = function(sentence) {
-var inputNoSymbols = sentence.replace(/[^a-zA-Z ]/g, "");
-console.log(inputNoSymbols);
-var words = inputNoSymbols.split(" ");
+// var inputNoSymbols = sentence.replace(/[^a-zA-Z ]/g, "");
+// console.log(inputNoSymbols);
+var words = sentence.split("");
   console.log(words);
-  if (words.includes(vowels[0])) {
-    alert("this is an A");
+    if (words[0]=== "a" || words[0]=== "e" || words[0]=== "i" || words[0]=== "o" || words[0]=== "u") {
+      return words + "ay"
+    } else {
+      return sentence
+    }
   }
-};
-
-// var pigLatin = function(sentence) {
-//   sentence.filter(function(x){
-//     console.log(characterLessSentence);
-//     if (x !== "1" && x !== "2" && x !== "3") {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   });
-// }
-
 
 
 //Start UI Logic
@@ -29,6 +20,7 @@ $(document).ready(function(){
     event.preventDefault();
     var sentence = $("input#sentence").val();
     var result = pigLatin(sentence);
+    alert(result);
     $("#output").text(result);
   });
 });
@@ -41,3 +33,20 @@ $(document).ready(function(){
 //     }
 //   });
 // };
+
+
+
+// if (words.includes(vowels[0])) {
+//   alert("this is an vowel");
+
+
+// var pigLatin = function(sentence) {
+//   sentence.filter(function(x){
+//     console.log(characterLessSentence);
+//     if (x !== "1" && x !== "2" && x !== "3") {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+// }
