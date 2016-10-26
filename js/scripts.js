@@ -8,7 +8,10 @@ var words = sentence.split("");
   console.log(words);
     if (words[0]=== "a" || words[0]=== "e" || words[0]=== "i" || words[0]=== "o" || words[0]=== "u") {
       return sentence + "ay"
-    // } else if  {
+    } else if (words[0]!== "a" || words[0]!== "e" || words[0]!== "i" || words[0]!== "o" || words[0]!== "u"){
+      words.push("ay");
+      var joinWord = words.join('');
+      return joinWord;
 
 
     } else {
