@@ -9,7 +9,8 @@ var words = sentence.split("");
     if (words[0]=== "a" || words[0]=== "e" || words[0]=== "i" || words[0]=== "o" || words[0]=== "u") {
       return sentence + "ay"
     } else if (words[0]!== "a" || words[0]!== "e" || words[0]!== "i" || words[0]!== "o" || words[0]!== "u"){
-      words.push("ay");
+      var sliceWord = words.splice(0,1);
+      words.push(sliceWord + "ay");
       var joinWord = words.join('');
       return joinWord;
 
