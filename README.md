@@ -5,7 +5,7 @@ _Pig Latin Rules:_
 4) If the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!
 
 _Specs:_
-* 1) The program will remove non-alphabetical characters, since they do not contain consonants or vowels.
+* 1) The program will do nothing to non-alphabetical characters, since they do not contain consonants or vowels.
   **Example Input: 3**
   **Example Output: 3**
 * 2) The program adds "ay" to single-letter words beginning with a vowel.
