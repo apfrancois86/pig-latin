@@ -47,17 +47,17 @@ var words = sentence.split("");
 //       console.log("wordLenght: "+words.length);
 //       for (var index = 0; index < words.length; index++){
 //         console.log("iteration number: "+index);
-//         if (words[0] !== /^[aeiou]$/) {
+//         if (words[index] !== /^[aeiou]$/) {
 //           var shifted = words.shift();
 //           console.log("shifted: " + shifted);
 //           words.push(shifted);
 //           console.log("joinWord: " + joinWord);
-//
-//         }
 //           var joinWord = words.join('');
+//           return joinWord + "ay";
+//         }
 //
 //       }
-//       return joinWord + "ay";
+//
 //     }
 //   }
 
