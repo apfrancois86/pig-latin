@@ -2,11 +2,9 @@ var vowels = ["a","e","i","o","u"];
 var output= "";
 
 var pigLatin = function(sentence) {
-// var inputNoSymbols = sentence.replace(/[^a-zA-Z ]/g, "");
-// console.log(inputNoSymbols);
 var words = sentence.split("");
   console.log(words);
-    if ((/[a-e-i-o-u]/.test(words[0]))) {
+    if ((/^[aeiou]$/).test(words[0])) {
       return sentence + "ay"
     } else if ((/[b-df-hj-np-tv-z]/.test(words[0]))){
       var sliceWord = words.splice(0,1);
@@ -25,7 +23,6 @@ $(document).ready(function(){
     event.preventDefault();
     var sentence = $("input#sentence").val();
     var result = pigLatin(sentence);
-    alert(result);
     $("#output").text(result);
   });
 });
@@ -55,3 +52,6 @@ $(document).ready(function(){
 //     }
 //   });
 // }
+
+// var inputNoSymbols = sentence.replace(/[^a-zA-Z ]/g, "");
+// console.log(inputNoSymbols);
